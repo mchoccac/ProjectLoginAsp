@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="proyectonet" Class="DataPersonaLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=proyectonet;Persist Security Info=True;User ID=mchoc" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="proyectonetConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.t_tipo_usuario" Member="t_tipo_usuarios">
+    <Type Name="t_tipo_usuario">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre_tipo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="t_tipo_usuario_t_usuario" Member="t_usuarios" ThisKey="id" OtherKey="tipo_usuario" Type="t_usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.t_usuario" Member="t_usuarios">
+    <Type Name="t_usuario">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre_usuario" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="t_tipo_usuario_t_usuario" Member="t_tipo_usuario" ThisKey="tipo_usuario" OtherKey="id" Type="t_tipo_usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

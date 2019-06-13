@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataPersonaLinq">
+  <DataContextMoniker Name="/DataPersonaLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="60983a58-dcc5-4d5d-8036-12f318113e58" absoluteBounds="0.75, 1.125, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/DataPersonaLinqDataContext/t_tipo_usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e4545ca-ef02-44ad-b729-58e50849802e" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72b1f24b-8c4a-46f6-9160-b890f85f8523" absoluteBounds="3.5, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataPersonaLinqDataContext/t_usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f4f4a4f-be55-44e7-9312-0428900536fb" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.72199625651042); (3.5 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataPersonaLinqDataContext/t_tipo_usuario/t_tipo_usuario_t_usuario" />
+      <nodes>
+        <classShapeMoniker Id="60983a58-dcc5-4d5d-8036-12f318113e58" />
+        <classShapeMoniker Id="72b1f24b-8c4a-46f6-9160-b890f85f8523" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
